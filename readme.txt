@@ -25,6 +25,11 @@ on Allwinner A10 and Allwinner A20 hardware have shown that Mali400
 usually starts misbehaving first. Exposing faults, which are very
 difficult to reproduce on CPU-only workloads.
 
+lima-memtester-restarter.sh is included for testing dvfs/cpufreq problems.
+On my system with incorrect voltage table this script crashed within a few
+minutes. It uses the same syntax as lima-memtester but stops the demo
+occasionally so that the cpu goes to idle state repatedly.
+
 If the hardware is unstable (for example RAM is clocked too high), the
 system may deadlock after running this test for a while. Or the test
 may start showing the following error messages in the console:
